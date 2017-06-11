@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TabHost android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tabHost"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="3dp">
+
+            <TabWidget android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@android:id/tabs"
+                android:layout_alignParentBottom="true" />
+
+            <FrameLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@android:id/tabcontent"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/txt_search"
+                        android:hint="enter search"
+                        android:layout_height="50dp" />
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:text="ALAHHUUUU AKBAR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="right"
+                            android:text="AVHAFJV adgfjhsdbvj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </GridLayout>
+                    <ListView
+                        android:id="@+id/lv_student1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp">
+                    </ListView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:text="Text 1"
+                            android:id="@+id/button1"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@+id/button2"/>
+                        <Button
+                            android:text="text2"
+                            android:id="@+id/button2"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@+id/button3"/>
+                        <Button
+                            android:text="text 3"
+                            android:id="@+id/button3"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab2"
+                    android:orientation="vertical">
+
+                    <TextView android:layout_width="fill_parent"
+                        android:layout_height="100px"
+                        android:text="This is tab2"
+                        android:id="@+id/txt2"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab3"
+                    android:orientation="vertical">
+
+                    <TextView android:layout_width="fill_parent"
+                        android:layout_height="100px"
+                        android:text="This is tab3"
+                        android:id="@+id/txt3"/>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tab4"
+                    android:orientation="vertical">
+
+                    <TextView android:layout_width="fill_parent"
+                        android:layout_height="100px"
+                        android:id="@+id/txt4"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+        </RelativeLayout>
+
+    </TabHost>
+
+</LinearLayout>
