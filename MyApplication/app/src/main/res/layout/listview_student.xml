@@ -3,7 +3,7 @@
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-
+        android:id="@+id/rootLayout"
         android:layout_width="fill_parent"
 
         android:orientation="horizontal"
@@ -30,13 +30,13 @@
             <TextView android:textStyle="bold"
                 android:id="@+id/tv_Name"
                 android:layout_width="wrap_content"
-                android:text="Ngan hang TienPhong"
+                android:text="Super Minion"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:paddingBottom="5dip"
                 android:paddingTop="5dip">
             </TextView>
-            <TextView android:text="161 Ba Trieu"
+            <TextView android:text="Hãng phim truyện nhựa Việt Nam"
                 android:id="@+id/tv_class"
                 android:layout_height="fill_parent"
                 android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
                 android:id="@+id/tv_studentid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABC XYZ"
+                android:text="Số 43 Nguyễn Chí Thanh, Hà Nội"
                 />
         </LinearLayout>
         <LinearLayout android:id="@+id/LinearLayout01"

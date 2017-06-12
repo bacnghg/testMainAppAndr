@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
@@ -39,24 +40,30 @@ public class LvStudentAdapter extends ArrayAdapter<Student> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater inflater = context.getLayoutInflater();
-        convertView = inflater.inflate(layout_id,null);
+       /* LayoutInflater inflater = context.getLayoutInflater();
+        convertView = inflater.inflate(layout_id,null);*/
+
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LinearLayout rowView = (LinearLayout) inflater.inflate(R.layout.listview_student, parent, false);
+
+
         if(listStudent.size() >0 && position >= 0){
-            final TextView textName = (TextView) convertView.findViewById(R.id.tv_Name);
+            /*final TextView textName = (TextView) rowView.findViewById(R.id.tv_Name);
             textName.setText(listStudent.get(position).getSt_Name());
-            final TextView textClass = (TextView) convertView.findViewById(R.id.tv_class);
+            final TextView textClass = (TextView) rowView.findViewById(R.id.tv_class);
             textClass.setText(listStudent.get(position).getSt_Class());
-            final TextView textID = (TextView) convertView.findViewById(R.id.tv_studentid);
+            final TextView textID = (TextView) rowView.findViewById(R.id.tv_studentid);
             textID.setText(listStudent.get(position).getSt_id());
-            final TextView textStatus = (TextView) convertView.findViewById(R.id.tv_status);
+            final TextView textStatus = (TextView) rowView.findViewById(R.id.tv_status);
             if(listStudent.get(position).getSt_Status() == 0) {
                 textStatus.setText("AAAA");
             }
             else textStatus.setText("BBBB");
 
-            final ImageView imageID = (ImageView) convertView.findViewById(R.id.img_location);
+            final ImageView imageID = (ImageView) rowView.findViewById(R.id.img_location); */
 
         }
-        return super.getView(position, convertView, parent);
+        return rowView;
     }
 }

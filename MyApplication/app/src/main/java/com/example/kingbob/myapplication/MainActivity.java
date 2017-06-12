@@ -20,9 +20,13 @@ public class MainActivity extends AppCompatActivity {
         listStudent.add(new Student(1, "Hello W", "Class Englia", 1,"ss"));
         listStudent.add(new Student(2, "Hello W", "Class Englia",2, "Offline"));
         listStudent.add(new Student(3, "Hello W", "Class Englia",3, "Offline"));
+        listStudent.add(new Student(11, "Hello W", "Class Englia", 1,"ss"));
+        listStudent.add(new Student(22, "Hello W", "Class Englia",2, "Offline"));
+        listStudent.add(new Student(33, "Hello W", "Class Englia",3, "Offline"));
         context = getApplicationContext();
         ListView lvStudent=(ListView) findViewById(R.id.lv_student1);
-        lvStudentAdapter = new LvStudentAdapter(this,listStudent,lvStudent.getId());
+
+        lvStudentAdapter = new LvStudentAdapter(this,listStudent,R.layout.listview_student);
 
         lvStudent.setAdapter(lvStudentAdapter);
     }
